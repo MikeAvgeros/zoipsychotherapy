@@ -127,3 +127,121 @@ body {
   color: var(--clr-ashgray);
   background-color: var(--clr-onyx);
 }
+
+/* navigation */
+
+.header {
+  display: flex;
+  background-color: var(--clr-ashgray);
+  height: var(--size-xxxl);
+  align-items: center;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.nav-list {
+  font-size: var(--fs-nav);
+}
+
+.nav-list {
+  display: flex;
+  gap: clamp(var(--size-s), 5vw, var(--size-xl));
+  font-weight: var(--fw-semi-bold);
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--clr-black);
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  color: var(--clr-morningblue);
+}
+
+@media (max-width: 50em) {
+  .navigation {
+    display: none;
+    position: fixed;
+    padding: var(--size-xxl);
+    inset: 7rem var(--size-l) auto;
+    max-width: 25rem;
+    margin-left: auto;
+    background: var(--clr-ashgray);
+    border-radius: var(--size-s);
+    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
+  }
+
+  .header[data-overlay]::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8));
+  }
+
+  .nav-list {
+    display: grid;
+    gap: var(--size-xxl);
+    text-align: center;
+    font-weight: var(--fw-bold);
+  }
+
+  .navigation[data-visible] {
+    display: block;
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0.5em;
+  }
+
+  .mobile-nav-toggle .icon-close {
+    display: none;
+  }
+}
+
+/* Utility classes */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+.container {
+  --max-width: 1110px;
+  --container-padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
