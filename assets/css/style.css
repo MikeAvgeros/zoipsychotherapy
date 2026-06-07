@@ -790,6 +790,28 @@ header.scrolled .burger span {
 }
 
 /* ==========================================================================
+   SUBPAGE UTILITIES
+   ========================================================================== */
+.subpage-body header .navbar {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: var(--shadow-sm);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.subpage-body header .logo a,
+.subpage-body header .nav-links > li > a {
+  color: var(--dark-neutral);
+}
+
+.subpage-body header .burger span {
+  background: var(--dark-neutral);
+}
+
+.subpage-body header .nav-links > li > a:hover {
+  color: var(--primary);
+}
+
+/* ==========================================================================
    ANIMATIONS & KEYFRAMES
    ========================================================================== */
 @keyframes bounce {
