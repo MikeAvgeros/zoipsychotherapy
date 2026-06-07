@@ -43,12 +43,14 @@ function initMobileNavigation() {
   burgerToggle.addEventListener("click", (e) => {
     e.stopPropagation();
     navLinks.classList.toggle("active");
+    burgerToggle.classList.toggle("open");
   });
 
   // Automatically close menu when clicking a link
   navLinksItem.forEach((link) => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("active");
+      burgerToggle.classList.remove("open");
     });
   });
 
@@ -56,6 +58,7 @@ function initMobileNavigation() {
   document.addEventListener("click", (e) => {
     if (!navLinks.contains(e.target) && !burgerToggle.contains(e.target)) {
       navLinks.classList.remove("active");
+      burgerToggle.classList.remove("open");
     }
   });
 }
