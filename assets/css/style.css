@@ -474,6 +474,175 @@ header.scrolled .burger span {
 }
 
 /* ==========================================================================
+   THERAPIST PROFILE
+   ========================================================================== */
+.profile-intro {
+  padding: 4rem 0;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.profile-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+}
+
+.profile-title-name {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  color: var(--dark-neutral);
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.profile-biography p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+}
+
+/* Timeline Layout Elements */
+.profile-details-cv {
+  padding: 6rem 0;
+  background-color: var(--bg-light);
+}
+
+.cv-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+}
+
+.cv-section-heading {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--dark-neutral);
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+.cv-section-heading.centered {
+  text-align: center;
+}
+
+.editorial-timeline {
+  list-style: none;
+  position: relative;
+  padding-left: 2rem;
+  border-left: 1px solid rgba(74, 107, 82, 0.2);
+}
+
+.editorial-timeline li {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.editorial-timeline li:last-child {
+  margin-bottom: 0;
+}
+
+.editorial-timeline li::before {
+  content: "";
+  position: absolute;
+  left: calc(-2rem - 5px);
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+.cv-year {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+}
+
+.editorial-timeline strong {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--dark-neutral);
+  margin-bottom: 0.4rem;
+}
+
+.editorial-timeline p {
+  color: var(--text-muted);
+}
+
+/* Accreditations Row style setup */
+.profile-accreditations {
+  padding: 6rem 0;
+  background: var(--bg-white);
+}
+
+.accreditation-row {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.accreditation-badge {
+  border: 1px solid rgba(74, 107, 82, 0.15);
+  background: var(--bg-light);
+  padding: 1.5rem 3rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  min-width: 200px;
+}
+
+.accreditation-badge strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--primary);
+}
+
+.accreditation-badge span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* RESPONSIVE SUB-QUERIES */
+@media (max-width: 950px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  .profile-image img {
+    height: 380px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .cv-split-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+/* ==========================================================================
    SERVICES / MODALITIES SECTION
    ========================================================================== */
 .services-section {
