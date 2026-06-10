@@ -2,8 +2,8 @@
    CSS CUSTOM VARIABLES & TOKENS (Premium Palette)
    ========================================================================== */
 :root {
-  --primary: #4a6b52;
-  --primary-hover: #3b5440;
+  --primary: #004526;
+  --primary-hover: #003025;
   --accent: #e2ede5;
   --dark-neutral: #222d26;
   --text-main: #4a554e;
@@ -282,11 +282,7 @@ header.scrolled .burger span {
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(34, 45, 38, 0.45) 0%,
-    rgba(34, 45, 38, 0.7) 100%
-  );
+  background: #8ba59a;
 }
 
 .hero-content {
