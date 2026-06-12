@@ -1070,7 +1070,8 @@ header.scrolled .burger span {
     width: 100%;
   }
 
-  .nav-cta {
+  .nav-links li a.nav-cta {
+    color: var(--bg-white) !important;
     text-align: center;
     margin-top: 1rem;
   }
