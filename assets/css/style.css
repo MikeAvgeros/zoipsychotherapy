@@ -2,13 +2,13 @@
    CSS CUSTOM VARIABLES & TOKENS (Premium Palette)
    ========================================================================== */
 :root {
-  --primary: #004526;
-  --primary-hover: #003025;
+  --primary: #136442;
+  --primary-hover: #004526;
   --accent: #e2ede5;
   --dark-neutral: #222d26;
   --text-main: #4a554e;
   --text-muted: #707a73;
-  --bg-light: #fbfbfa;
+  --bg-light: #edf1ee;
   --bg-white: #ffffff;
 
   --font-serif: "Playfair Display", Georgia, serif;
@@ -723,6 +723,216 @@ header.scrolled .burger span {
 }
 
 /* ==========================================================================
+   SERVICE DETAILS
+   ========================================================================== */
+.service-overview {
+  padding: 4rem 0;
+  background: var(--bg-white);
+}
+
+.service-overview-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.service-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+}
+
+.lead-text {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--dark-neutral);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.service-editorial-text p:not(.lead-text) {
+  font-size: 1.05rem;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+}
+
+.service-editorial-image .image-fit {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.service-editorial-image img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+/* Editorial Focus Areas Section Styles */
+.service-focus {
+  padding: 6rem 0;
+  background-color: var(--bg-light);
+}
+
+.service-section-intro {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  margin-bottom: 4rem;
+  max-width: 700px;
+}
+
+.focus-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.focus-item {
+  position: relative;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(74, 107, 82, 0.2);
+}
+
+.focus-number {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: var(--primary);
+  opacity: 0.4;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.focus-item h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--dark-neutral);
+  margin-bottom: 1rem;
+}
+
+.focus-item p {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Logistics & Formats Section Layout */
+.service-logistics {
+  padding: 6rem 0;
+  background: var(--bg-white);
+}
+
+.logistics-editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.logistics-card {
+  background: var(--bg-light);
+  padding: 3.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.logistics-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.logistics-icon {
+  font-size: 1.8rem;
+}
+
+.logistics-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--dark-neutral);
+}
+
+.logistics-card > p {
+  font-size: 1.05rem;
+  color: var(--text-main);
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.location-details {
+  border-top: 1px solid rgba(74, 107, 82, 0.15);
+  padding-top: 1.5rem;
+}
+
+.location-details strong {
+  display: block;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.location-details p {
+  font-size: 1rem;
+  color: var(--dark-neutral);
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES (Service Subpage Ergonomics)
+   ========================================================================== */
+@media (max-width: 950px) {
+  .service-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .service-editorial-image {
+    order: -1; /* Keeps the image on top for tablets and mobile devices */
+  }
+
+  .service-editorial-image img {
+    height: 360px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .focus-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .logistics-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .logistics-card {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-overview {
+    padding: 2rem 0;
+  }
+
+  .lead-text {
+    font-size: 1.15rem;
+  }
+}
+
+/* ==========================================================================
    FEES & POLICIES SECTION
    ========================================================================== */
 .fees-section {
@@ -786,26 +996,157 @@ header.scrolled .burger span {
   font-weight: bold;
 }
 
+/* ==========================================================================
+   PRACTICE POLICIES
+   ========================================================================== */
 .policies-wrapper {
   background: var(--accent);
-  padding: 3rem;
+  padding: 3.5rem;
   border-radius: var(--radius-lg);
   color: var(--dark-neutral);
 }
 
-.policies-wrapper h3 {
+.policies-wrapper p:last-child {
+  margin-bottom: 0;
+}
+
+.policy-page-header {
+  margin-bottom: 3rem;
+  max-width: 800px;
+}
+
+.policy-meta {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.75rem;
+}
+
+.policy-lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--text-main);
+  font-weight: 400;
+}
+
+.policy-layout-grid {
+  display: block;
+  max-width: 800px; /* Limits paragraph span width to maximize reading ergonomics */
+  margin: 0 auto;
+}
+
+.policy-content-stream {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem; /* Generous breathing space between distinct rules blocks */
+}
+
+.policy-block h2 {
   font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 69, 38, 0.15);
+}
+
+.policy-block h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--dark-neutral);
+  margin: 2rem 0 1rem 0;
+}
+
+.policy-block p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-main);
   margin-bottom: 1.5rem;
 }
 
-.policies-wrapper p {
-  margin-bottom: 1.2rem;
-  font-size: 1.05rem;
+.policy-block ul {
+  list-style: none;
+  margin: 1rem 0 1.5rem 0;
 }
 
-.policies-wrapper p:last-child {
-  margin-bottom: 0;
+.policy-block ul li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.policy-block ul li::before {
+  content: "•";
+  color: var(--primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Regulatory highlight block panels */
+.policy-callout {
+  background-color: var(
+    --bg-light
+  ); /* Uses your soft complimentary light tint */
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  margin: 2rem 0;
+  border-left: 4px solid var(--primary);
+}
+
+.policy-callout p,
+.policy-callout h3 {
+  margin-bottom: 0 !important;
+}
+
+.policy-callout h3 {
+  margin-top: 0 !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Explicit high-contrast focus for monetary / slot cancellation rules */
+.policy-callout.dynamic-alert {
+  background-color: #faf8f4;
+  border: 1px solid rgba(0, 69, 38, 0.15);
+  border-left: 4px solid var(--accent); /* Accents the clay/terracotta pop */
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA CONSTRAINTS (Policy Optimization)
+   ========================================================================== */
+@media (max-width: 950px) {
+  .policy-layout-grid {
+    max-width: 100%;
+  }
+
+  .policy-block h2 {
+    font-size: 1.75rem;
+  }
+
+  .policy-callout {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .policy-page-header {
+    margin-bottom: 2rem;
+  }
+
+  .policy-lead {
+    font-size: 1.15rem;
+  }
+
+  .policy-content-stream {
+    gap: 3.5rem;
+  }
 }
 
 /* ==========================================================================

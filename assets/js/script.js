@@ -1,5 +1,5 @@
 /**
- * MindSpace Practice - Core UI Interactions
+ * Synthesis Practice Practice - Core UI Interactions
  * Engineered for performance, error resilience, and smooth UX.
  */
 
