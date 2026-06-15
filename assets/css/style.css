@@ -999,17 +999,6 @@ header.scrolled .burger span {
 /* ==========================================================================
    PRACTICE POLICIES
    ========================================================================== */
-.policies-wrapper {
-  background: var(--accent);
-  padding: 3.5rem;
-  border-radius: var(--radius-lg);
-  color: var(--dark-neutral);
-}
-
-.policies-wrapper p:last-child {
-  margin-bottom: 0;
-}
-
 .policy-page-header {
   margin-bottom: 3rem;
   max-width: 800px;
@@ -1033,6 +1022,7 @@ header.scrolled .burger span {
 }
 
 .policy-layout-grid {
+  padding-top: 3rem;
   display: block;
   max-width: 800px; /* Limits paragraph span width to maximize reading ergonomics */
   margin: 0 auto;
