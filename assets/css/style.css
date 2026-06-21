@@ -398,7 +398,7 @@ header.scrolled .burger span {
 
 .value-card {
   background: var(--bg-white);
-  padding: 3rem 2rem;
+  padding: 2rem;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   border-top: 4px solid var(--primary);
@@ -406,7 +406,7 @@ header.scrolled .burger span {
 
 .value-card h3 {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: var(--dark-neutral);
   margin-bottom: 1rem;
 }
@@ -682,11 +682,11 @@ header.scrolled .burger span {
   font-family: var(--font-serif);
   font-size: 1.4rem;
   color: var(--dark-neutral);
-  padding: 1.8rem 1.8rem 0.5rem;
+  padding: 1.8rem 1rem 0.5rem;
 }
 
 .card-text {
-  padding: 0 1.8rem 1.5rem;
+  padding: 0 1rem 1.5rem;
   color: var(--text-muted);
   font-size: 0.98rem;
   flex-grow: 1;
@@ -694,7 +694,7 @@ header.scrolled .burger span {
 
 .special-link {
   display: inline-block;
-  margin: 0 1.8rem 2rem;
+  margin: 0 1rem 2rem;
   align-self: flex-start;
   font-weight: 600;
   font-size: 0.95rem;
