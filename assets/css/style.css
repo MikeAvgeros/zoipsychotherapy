@@ -6,8 +6,8 @@
   --primary-hover: #004526;
   --accent: #e2ede5;
   --dark-neutral: #222d26;
-  --text-main: #4a554e;
-  --text-muted: #707a73;
+  --text-main: #2e3b33;
+  --text-muted: #5c6b61;
   --bg-light: #edf1ee;
   --bg-white: #ffffff;
 
@@ -20,11 +20,7 @@
   --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.03);
   --shadow-md: 0 12px 35px rgba(34, 45, 38, 0.08);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  --section-padding: clamp(3.5rem, 8vw, 7.5rem) 0;
 }
 
 /* ==========================================================================
@@ -52,6 +48,9 @@ html {
   height: 100%;
   scroll-behavior: smooth;
   font-size: 16px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -82,6 +81,34 @@ a {
   padding: 0 2rem;
 }
 
+.about-section,
+.values-section,
+.team-section,
+.services-section,
+.profile-details-cv,
+.profile-accreditations,
+.service-focus,
+.service-logistics,
+.fees-section {
+  padding: var(--section-padding) !important;
+}
+
+.service-overview,
+.profile-intro {
+  padding: clamp(3.5rem, 8vw, 5rem) 0 0 0;
+}
+
+.hero-content p,
+.value-card p,
+.team-card p,
+.service-card p,
+.logistics-card p,
+.policy-block p,
+.form-fields label,
+.footer-section p {
+  max-width: 100%;
+}
+
 /* Global Section Typography Header Utilities */
 .section-title {
   font-family: var(--font-serif);
@@ -93,7 +120,7 @@ a {
 }
 
 .section-subtitle {
-  max-width: 650px;
+  max-width: 720px;
   margin: 0 auto 4rem;
   text-align: center;
   color: var(--text-muted);
