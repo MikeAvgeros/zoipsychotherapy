@@ -1341,12 +1341,15 @@ header.scrolled .burger span {
   .hero-content h1 {
     font-size: 3.2rem;
   }
+
   .about-grid {
     gap: 3rem;
   }
+
   .about-image-wrapper img {
     height: 440px;
   }
+
   .values-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -1418,12 +1421,15 @@ header.scrolled .burger span {
   .about-grid {
     grid-template-columns: 1fr;
   }
+
   .about-image-wrapper {
     order: -1;
   }
+
   .about-image-wrapper img {
     height: 380px;
   }
+
   .about-text {
     text-align: center;
   }
@@ -1432,6 +1438,7 @@ header.scrolled .burger span {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 3.5rem;
@@ -1440,26 +1447,37 @@ header.scrolled .burger span {
 
 @media (max-width: 600px) {
   html {
-    font-size: 14px;
+    font-size: 1rem;
   }
+
   .hero-content h1 {
     font-size: 2.3rem;
   }
+
   .section-title {
     font-size: 2.1rem;
   }
+
+  .about-text h2 {
+    font-size: 2.1rem;
+  }
+
   .form-fields {
     grid-template-columns: 1fr;
   }
+
   .field.full-width {
     grid-column: span 1;
   }
+
   .form-wrapper form {
     padding: 1.5rem;
   }
+
   .team-grid {
     grid-template-columns: 1fr;
   }
+
   .team-img {
     height: 360px;
   }
