@@ -45,7 +45,6 @@ html:focus-within {
 }
 
 html {
-  height: 100%;
   scroll-behavior: smooth;
   font-size: 16px;
   font-synthesis: none;
@@ -54,11 +53,17 @@ html {
 }
 
 body {
-  height: 100%;
   font-family: var(--font-sans);
   line-height: 1.6;
   color: var(--text-main);
   background-color: var(--bg-white);
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 img,
@@ -651,11 +656,13 @@ header.scrolled .burger span {
     gap: 3rem;
     text-align: center;
   }
+
   .profile-image img {
     height: 380px;
     max-width: 400px;
     margin: 0 auto;
   }
+
   .cv-split-grid {
     grid-template-columns: 1fr;
     gap: 4rem;
@@ -1366,7 +1373,7 @@ header.scrolled .burger span {
     top: 0;
     right: -100%;
     height: 100vh;
-    width: 320px;
+    width: 300px;
     background: var(--bg-white);
     flex-direction: column;
     justify-content: flex-start;
@@ -1411,7 +1418,7 @@ header.scrolled .burger span {
     background: transparent;
     padding-left: 1.2rem;
     padding-top: 0.5rem;
-    display: none; /* Controlled via target selection or basic flow */
+    display: none;
   }
 
   .dropdown:hover .dropdown-menu {
@@ -1420,6 +1427,7 @@ header.scrolled .burger span {
 
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
 
   .about-image-wrapper {
@@ -1427,11 +1435,44 @@ header.scrolled .burger span {
   }
 
   .about-image-wrapper img {
-    height: 380px;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    max-width: 100%;
   }
 
   .about-text {
     text-align: center;
+  }
+
+  .service-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .service-editorial-image {
+    order: -1;
+  }
+
+  .service-editorial-image img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .focus-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .logistics-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .logistics-card {
+    padding: 2.5rem;
   }
 
   .fees-grid-layout {
@@ -1441,29 +1482,44 @@ header.scrolled .burger span {
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 3.5rem;
+    gap: 3rem;
   }
 }
 
 @media (max-width: 600px) {
   html {
-    font-size: 1rem;
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 0 1.5rem;
   }
 
   .hero-content h1 {
     font-size: 2.3rem;
   }
 
-  .section-title {
-    font-size: 2.1rem;
-  }
-
+  .section-title,
   .about-text h2 {
     font-size: 2.1rem;
   }
 
+  .section-subtitle {
+    margin: 0 auto 2.5rem;
+  }
+
+  .profile-title-name {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .profile-label {
+    text-align: center;
+  }
+
   .form-fields {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .field.full-width {
@@ -1471,14 +1527,52 @@ header.scrolled .burger span {
   }
 
   .form-wrapper form {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-info-wrapper {
+    align-items: center;
+    width: 100%;
+  }
+
+  .contact-cards {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-cards li {
     padding: 1.5rem;
   }
 
   .team-grid {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
   .team-img {
-    height: 360px;
+    height: 380px;
+    max-width: 100%;
+  }
+
+  .policy-page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .policy-layout-grid {
+    padding-top: 1.5rem;
+  }
+
+  .policy-content-stream {
+    gap: 3rem;
+  }
+
+  .policy-block h2 {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .policy-callout {
+    padding: 1.5rem 1.2rem;
   }
 }
