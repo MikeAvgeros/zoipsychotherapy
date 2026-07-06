@@ -81,7 +81,7 @@ a {
 
 .container {
   width: 100%;
-  max-width: 1240px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -514,7 +514,7 @@ header.scrolled .burger span {
 
 .profile-image img {
   width: 100%;
-  height: 500px;
+  height: 720px;
   object-fit: cover;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
