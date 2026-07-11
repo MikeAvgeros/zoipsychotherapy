@@ -93,7 +93,6 @@ a {
 .profile-details-cv,
 .profile-accreditations,
 .service-focus,
-.service-logistics,
 .fees-section {
   padding: var(--section-padding) !important;
 }
@@ -107,7 +106,6 @@ a {
 .value-card p,
 .team-card p,
 .service-card p,
-.logistics-card p,
 .policy-block p,
 .form-fields label,
 .footer-section p {
@@ -853,71 +851,6 @@ header.scrolled .burger span {
   line-height: 1.7;
 }
 
-/* Logistics & Formats Section Layout */
-.service-logistics {
-  padding: 6rem 0;
-  background: var(--bg-white);
-}
-
-.logistics-editorial-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin-top: 2rem;
-}
-
-.logistics-card {
-  background: var(--bg-light);
-  padding: 3.5rem;
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(0, 0, 0, 0.03);
-  display: flex;
-  flex-direction: column;
-}
-
-.logistics-header {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 1.5rem;
-}
-
-.logistics-icon {
-  font-size: 1.8rem;
-}
-
-.logistics-card h3 {
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
-  color: var(--dark-neutral);
-}
-
-.logistics-card > p {
-  font-size: 1.05rem;
-  color: var(--text-main);
-  margin-bottom: 2rem;
-  flex-grow: 1;
-}
-
-.location-details {
-  border-top: 1px solid rgba(74, 107, 82, 0.15);
-  padding-top: 1.5rem;
-}
-
-.location-details strong {
-  display: block;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-
-.location-details p {
-  font-size: 1rem;
-  color: var(--dark-neutral);
-}
-
 /* ==========================================================================
    RESPONSIVE MEDIA QUERIES (Service Subpage Ergonomics)
    ========================================================================== */
@@ -941,15 +874,6 @@ header.scrolled .burger span {
   .focus-editorial-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
-  }
-
-  .logistics-editorial-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .logistics-card {
-    padding: 2.5rem;
   }
 }
 
@@ -1464,15 +1388,6 @@ header.scrolled .burger span {
   .focus-editorial-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
-  }
-
-  .logistics-editorial-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .logistics-card {
-    padding: 2.5rem;
   }
 
   .fees-grid-layout {
