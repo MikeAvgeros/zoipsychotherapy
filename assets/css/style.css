@@ -183,7 +183,7 @@ header.scrolled .logo a {
 .nav-links > li > a {
   color: var(--bg-white);
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 1rem;
   padding: 0.5rem 0;
 }
 
@@ -228,7 +228,7 @@ header.scrolled .nav-links > li > a:hover {
   left: 50%;
   transform: translateX(-50%);
   background: var(--bg-white);
-  min-width: 220px;
+  min-width: 240px;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
   opacity: 0;
@@ -449,7 +449,7 @@ header.scrolled .burger span {
 .team-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .team-card {
@@ -468,11 +468,14 @@ header.scrolled .burger span {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
   transition: var(--transition-smooth);
 }
 
 .team-card:hover .team-img img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 .team-card h3 {
@@ -484,14 +487,14 @@ header.scrolled .burger span {
 
 .team-card span {
   display: block;
-  font-size: 0.98rem;
+  font-size: 1rem;
   color: var(--primary);
   font-weight: 600;
   margin-bottom: 0.8rem;
 }
 
 .team-card p {
-  font-size: 0.98rem;
+  font-size: 1rem;
   color: var(--text-muted);
   padding-bottom: 0.8rem;
 }
@@ -596,7 +599,7 @@ header.scrolled .burger span {
 
 .cv-year {
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--primary);
   margin-bottom: 0.3rem;
@@ -678,7 +681,7 @@ header.scrolled .burger span {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2.5rem;
 }
 
@@ -699,36 +702,38 @@ header.scrolled .burger span {
 
 .card-image {
   overflow: hidden;
-  height: 220px;
+  height: 240px;
 }
 
 .card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .card-title {
   font-family: var(--font-serif);
   font-size: 1.4rem;
   color: var(--dark-neutral);
-  padding: 1.8rem 1rem 0.5rem;
+  padding: 1.8rem 1.2rem 0.5rem;
 }
 
 .card-text {
-  padding: 0 1rem 1.5rem;
+  padding: 0 1.2rem 1.5rem;
   color: var(--text-muted);
-  font-size: 0.98rem;
+  font-size: 1rem;
   flex-grow: 1;
 }
 
 .special-link {
   display: inline-block;
-  margin: 0 1rem 2rem;
+  margin: 0 1.2rem 2rem;
   align-self: flex-start;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--primary);
+  letter-spacing: 1px;
 }
 
 .center-action {
@@ -834,7 +839,7 @@ header.scrolled .burger span {
 }
 
 .focus-item p {
-  font-size: 0.98rem;
+  font-size: 1rem;
   color: var(--text-muted);
   line-height: 1.7;
 }
@@ -955,7 +960,7 @@ header.scrolled .burger span {
   }
 
   .approach-content-stream h3 {
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     margin-top: 1.8rem;
   }
 }
