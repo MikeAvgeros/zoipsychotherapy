@@ -75,6 +75,14 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+#about,
+#values,
+#team,
+#services,
+#contact {
+  scroll-margin-top: 120px;
+}
+
 body {
   font-family: var(--font-sans);
   line-height: 1.6;
@@ -1134,9 +1142,7 @@ header.scrolled .burger span {
 
 /* Regulatory highlight block panels */
 .policy-callout {
-  background-color: var(
-    --bg-light
-  );
+  background-color: var(--bg-light);
   padding: 2rem;
   border-radius: var(--radius-md);
   margin: 2rem 0;
