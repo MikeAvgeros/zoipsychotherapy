@@ -734,7 +734,7 @@ header.scrolled .burger span {
   font-weight: 600;
   font-size: 1rem;
   color: var(--primary);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .center-action {
