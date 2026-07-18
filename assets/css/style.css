@@ -1118,7 +1118,7 @@ header.scrolled .burger span {
 .policy-callout {
   background-color: var(
     --bg-light
-  ); /* Uses your soft complimentary light tint */
+  );
   padding: 2rem;
   border-radius: var(--radius-md);
   margin: 2rem 0;
@@ -1135,19 +1135,17 @@ header.scrolled .burger span {
   margin-bottom: 0.75rem !important;
 }
 
-/* Support-callout: chip-style list that flows inline with its title */
 .support-callout {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  column-gap: 0.75rem;
-  row-gap: 0.85rem;
+  column-gap: 0.85rem;
+  row-gap: 1rem;
 }
 
 .support-callout p {
   flex: 0 0 auto;
   color: var(--dark-neutral);
-  font-weight: 600;
 }
 
 .support-callout ul {
@@ -1173,8 +1171,26 @@ header.scrolled .burger span {
 }
 
 @media (max-width: 600px) {
+  .support-callout {
+    padding: 1.25rem;
+  }
+
+  .support-callout p {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .support-callout ul {
+    min-width: 0;
+    width: 100%;
+  }
+
   .support-callout ul li {
     white-space: normal;
+    min-width: 0;
+    max-width: 100%;
+    font-size: 0.85rem;
+    overflow-wrap: break-word;
   }
 }
 
