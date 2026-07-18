@@ -15,6 +15,7 @@
   --font-sans: "Plus Jakarta Sans", Helvetica, sans-serif;
 
   --fs-hero-title: clamp(2.5rem, 2.07rem + 2.14vw, 4rem);
+  --fs-hero-body-lg: clamp(1.1rem, 1.01rem + 0.21vw, 1.5rem);
   --fs-page-title: clamp(2.3rem, 2.04rem + 1.29vw, 3.2rem);
   --fs-section-title: clamp(2.1rem, 1.9rem + 1vw, 2.8rem);
   --fs-subsection-title: clamp(1.6rem, 1.43rem + 0.86vw, 2.2rem);
@@ -358,7 +359,7 @@ header.scrolled .burger span {
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: var(--fs-hero-body-lg);
   font-weight: 400;
   max-width: 680px;
   margin: 0 auto 2.5rem;
