@@ -1253,6 +1253,10 @@ header.scrolled .burger span {
   margin-bottom: 5rem;
 }
 
+.footer-grid > * {
+  min-width: 0;
+}
+
 .form-wrapper form {
   background: var(--bg-light);
   padding: 3rem;
@@ -1345,6 +1349,7 @@ header.scrolled .burger span {
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   border: var(--hairline);
+  overflow-wrap: break-word;
 }
 
 .contact-cards strong {
