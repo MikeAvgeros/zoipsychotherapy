@@ -1084,14 +1084,14 @@ header.scrolled .burger span {
 .policy-layout-grid {
   padding-top: 3rem;
   display: block;
-  max-width: 800px; /* Limits paragraph span width to maximize reading ergonomics */
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .policy-content-stream {
   display: flex;
   flex-direction: column;
-  gap: 5rem; /* Generous breathing space between distinct rules blocks */
+  gap: 5rem;
 }
 
 .policy-block h2 {
