@@ -14,6 +14,15 @@
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Plus Jakarta Sans", Helvetica, sans-serif;
 
+  --fs-hero-title: clamp(2.5rem, 2.07rem + 2.14vw, 4rem);
+  --fs-page-title: clamp(2.3rem, 2.04rem + 1.29vw, 3.2rem);
+  --fs-section-title: clamp(2.1rem, 1.9rem + 1vw, 2.8rem);
+  --fs-subsection-title: clamp(1.6rem, 1.43rem + 0.86vw, 2.2rem);
+  --fs-card-title: clamp(1.25rem, 1.18rem + 0.36vw, 1.5rem);
+  --fs-display: clamp(2rem, 1.86rem + 0.71vw, 2.5rem);
+  --fs-list-heading: clamp(1.05rem, 1.01rem + 0.21vw, 1.2rem);
+  --fs-body-lg: clamp(1rem, 0.97rem + 0.14vw, 1.1rem);
+
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --radius-lg: 20px;
   --radius-md: 12px;
@@ -22,6 +31,18 @@
   --hairline: 1px solid rgba(0, 0, 0, 0.06);
 
   --section-padding: clamp(3.5rem, 8vw, 7.5rem) 0;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --fs-hero-title: clamp(2rem, 1.7rem + 1.5vw, 2.5rem);
+    --fs-page-title: clamp(1.9rem, 1.7rem + 1vw, 2.3rem);
+    --fs-section-title: clamp(1.75rem, 1.6rem + 0.75vw, 2.1rem);
+    --fs-subsection-title: clamp(1.4rem, 1.3rem + 0.5vw, 1.6rem);
+    --fs-display: clamp(1.7rem, 1.55rem + 0.75vw, 2rem);
+    --fs-list-heading: clamp(1rem, 0.95rem + 0.14vw, 1.1rem);
+    --fs-body-lg: clamp(0.95rem, 0.88rem + 0.1vw, 1rem);
+  }
 }
 
 /* ==========================================================================
@@ -123,7 +144,7 @@ button:focus-visible {
 /* Global Section Typography Header Utilities */
 .section-title {
   font-family: var(--font-serif);
-  font-size: 2.8rem;
+  font-size: var(--fs-section-title);
   color: var(--dark-neutral);
   text-align: center;
   margin-bottom: 1rem;
@@ -135,7 +156,7 @@ button:focus-visible {
   margin: 0 auto 4rem;
   text-align: center;
   color: var(--text-muted);
-  font-size: 1.1rem;
+  font-size: var(--fs-body-lg);
 }
 
 /* ==========================================================================
@@ -329,7 +350,7 @@ header.scrolled .burger span {
 
 .hero-content h1 {
   font-family: var(--font-serif);
-  font-size: 4rem;
+  font-size: var(--fs-hero-title);
   line-height: 1.2;
   font-weight: 400;
   margin-bottom: 1.5rem;
@@ -397,7 +418,7 @@ header.scrolled .burger span {
 
 .about-text h2 {
   font-family: var(--font-serif);
-  font-size: 2.8rem;
+  font-size: var(--fs-section-title);
   color: var(--dark-neutral);
   line-height: 1.3;
   font-weight: 400;
@@ -405,7 +426,7 @@ header.scrolled .burger span {
 }
 
 .about-text p {
-  font-size: 1.1rem;
+  font-size: var(--fs-body-lg);
   color: var(--text-main);
   margin-bottom: 1.5rem;
 }
@@ -445,7 +466,7 @@ header.scrolled .burger span {
 
 .value-card h3 {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: var(--fs-card-title);
   color: var(--dark-neutral);
   margin-bottom: 1rem;
 }
@@ -493,7 +514,7 @@ header.scrolled .burger span {
 
 .team-card h3 {
   font-family: var(--font-serif);
-  font-size: 1.3rem;
+  font-size: var(--fs-card-title);
   color: var(--dark-neutral);
   margin-bottom: 0.3rem;
 }
@@ -547,14 +568,14 @@ header.scrolled .burger span {
 
 .profile-title-name {
   font-family: var(--font-serif);
-  font-size: 3.2rem;
+  font-size: var(--fs-page-title);
   color: var(--dark-neutral);
   line-height: 1.2;
   margin-bottom: 2rem;
 }
 
 .profile-biography p {
-  font-size: 1.1rem;
+  font-size: var(--fs-body-lg);
   margin-bottom: 1.5rem;
   color: var(--text-main);
 }
@@ -573,7 +594,7 @@ header.scrolled .burger span {
 
 .cv-section-heading {
   font-family: var(--font-serif);
-  font-size: 2rem;
+  font-size: var(--fs-subsection-title);
   color: var(--dark-neutral);
   margin-bottom: 2.5rem;
   font-weight: 400;
@@ -620,7 +641,7 @@ header.scrolled .burger span {
 
 .editorial-timeline strong {
   display: block;
-  font-size: 1.2rem;
+  font-size: var(--fs-list-heading);
   color: var(--dark-neutral);
   margin-bottom: 0.4rem;
 }
@@ -655,7 +676,7 @@ header.scrolled .burger span {
 .accreditation-badge strong {
   display: block;
   font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-size: var(--fs-card-title);
   color: var(--primary);
 }
 
@@ -728,7 +749,7 @@ header.scrolled .burger span {
 
 .card-title {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-size: var(--fs-card-title);
   color: var(--dark-neutral);
   padding: 1.8rem 1.2rem 0.5rem;
 }
@@ -797,7 +818,7 @@ header.scrolled .burger span {
 }
 
 .service-editorial-text p {
-  font-size: 1.1rem;
+  font-size: var(--fs-body-lg);
   margin-bottom: 1.5rem;
   color: var(--text-main);
 }
@@ -818,7 +839,7 @@ header.scrolled .burger span {
 }
 
 .service-section-intro {
-  font-size: 1.1rem;
+  font-size: var(--fs-body-lg);
   color: var(--text-main);
   margin-bottom: 4rem;
 }
@@ -838,7 +859,7 @@ header.scrolled .burger span {
 .focus-number {
   display: block;
   font-family: var(--font-serif);
-  font-size: 2.5rem;
+  font-size: var(--fs-display);
   color: var(--primary);
   opacity: 0.55;
   line-height: 1;
@@ -847,7 +868,7 @@ header.scrolled .burger span {
 
 .focus-item h3 {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-size: var(--fs-card-title);
   color: var(--dark-neutral);
   margin-bottom: 1rem;
 }
@@ -904,7 +925,7 @@ header.scrolled .burger span {
 
 .approach-content-stream h2 {
   font-family: var(--font-serif);
-  font-size: 2.3rem;
+  font-size: var(--fs-subsection-title);
   color: var(--dark-neutral);
   line-height: 1.3;
   font-weight: 400;
@@ -918,7 +939,7 @@ header.scrolled .burger span {
 }
 
 .approach-content-stream p {
-  font-size: 1.1rem;
+  font-size: var(--fs-body-lg);
   line-height: 1.75;
   color: var(--text-main);
   margin-bottom: 2rem;
@@ -936,7 +957,7 @@ header.scrolled .burger span {
 }
 
 .approach-content-stream h3 + p {
-  font-size: 1.1rem;
+  font-size: var(--fs-body-lg);
   color: var(--text-main);
   margin-bottom: 1.8rem;
 }
@@ -945,10 +966,6 @@ header.scrolled .burger span {
    RESPONSIVE MEDIA CONSTRAINTS (Approach Section Subpage)
    ========================================================================== */
 @media (max-width: 950px) {
-  .approach-content-stream h2 {
-    font-size: 2.1rem;
-  }
-
   .approach-content-stream h2:not(:first-child) {
     margin-top: 4rem;
     padding-top: 2rem;
@@ -961,7 +978,6 @@ header.scrolled .burger span {
   }
 
   .approach-content-stream h2 {
-    font-size: 1.8rem;
     margin-bottom: 1.2rem;
   }
 
@@ -995,14 +1011,14 @@ header.scrolled .burger span {
 
 .fee-card h3 {
   font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-size: var(--fs-card-title);
   color: var(--dark-neutral);
   margin-bottom: 1rem;
 }
 
 .fee-card .price {
   font-family: var(--font-serif);
-  font-size: 2.5rem;
+  font-size: var(--fs-display);
   color: var(--primary);
   font-weight: 700;
   margin-bottom: 2rem;
@@ -1053,7 +1069,7 @@ header.scrolled .burger span {
 
 .policy-block h2 {
   font-family: var(--font-serif);
-  font-size: 2rem;
+  font-size: var(--fs-subsection-title);
   color: var(--primary);
   margin-bottom: 1.5rem;
   font-weight: 500;
@@ -1063,7 +1079,7 @@ header.scrolled .burger span {
 
 .policy-block h3 {
   font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-size: var(--fs-card-title);
   color: var(--dark-neutral);
   margin: 2rem 0 1rem 0;
 }
@@ -1124,10 +1140,6 @@ header.scrolled .burger span {
 @media (max-width: 950px) {
   .policy-layout-grid {
     max-width: 100%;
-  }
-
-  .policy-block h2 {
-    font-size: 1.75rem;
   }
 
   .policy-callout {
@@ -1317,10 +1329,6 @@ header.scrolled .burger span {
 }
 
 @media (max-width: 1024px) {
-  .hero-content h1 {
-    font-size: 3.2rem;
-  }
-
   .about-grid {
     gap: 3rem;
   }
@@ -1450,21 +1458,8 @@ header.scrolled .burger span {
 }
 
 @media (max-width: 600px) {
-  html {
-    font-size: 15px;
-  }
-
   .container {
     padding: 0 1.5rem;
-  }
-
-  .hero-content h1 {
-    font-size: 2.3rem;
-  }
-
-  .section-title,
-  .about-text h2 {
-    font-size: 2.1rem;
   }
 
   .section-subtitle {
@@ -1472,7 +1467,6 @@ header.scrolled .burger span {
   }
 
   .profile-title-name {
-    font-size: 2.3rem;
     text-align: center;
   }
 
@@ -1526,7 +1520,6 @@ header.scrolled .burger span {
   }
 
   .policy-block h2 {
-    font-size: 1.5rem;
     text-align: left;
   }
 
