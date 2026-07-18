@@ -252,6 +252,21 @@ header.scrolled .nav-links > li > a:hover {
   gap: 4px;
 }
 
+.dropdown-trigger::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  margin-left: 2px;
+}
+
+.dropdown.open .dropdown-trigger::after {
+  transform: rotate(-135deg);
+}
+
 .dropdown-menu {
   position: absolute;
   top: 150%;
@@ -715,8 +730,9 @@ header.scrolled .burger span {
 }
 
 .features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2.5rem;
 }
 
@@ -728,6 +744,8 @@ header.scrolled .burger span {
   border: var(--hairline);
   display: flex;
   flex-direction: column;
+  flex: 1 1 320px;
+  max-width: 400px;
   transition: var(--transition-smooth);
 }
 
@@ -1466,7 +1484,8 @@ header.scrolled .burger span {
     display: none;
   }
 
-  .dropdown:hover .dropdown-menu {
+  .dropdown:hover .dropdown-menu,
+  .dropdown.open .dropdown-menu {
     display: block;
   }
 

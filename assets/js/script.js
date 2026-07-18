@@ -35,30 +35,58 @@ function initSmoothScroll() {
 function initMobileNavigation() {
   const burgerToggle = document.getElementById("burgerToggle");
   const navLinks = document.querySelector(".nav-links");
-  const navLinksItem = document.querySelectorAll(".nav-links a");
+  // Leaf links close the whole menu; dropdown triggers toggle their submenu instead.
+  const navLinksItem = document.querySelectorAll(
+    ".nav-links a:not(.dropdown-trigger)"
+  );
+  const dropdowns = document.querySelectorAll(".dropdown");
+  const MOBILE_BREAKPOINT = 950;
 
   if (!burgerToggle || !navLinks) return;
+
+  const closeDropdowns = () => {
+    dropdowns.forEach((dropdown) => dropdown.classList.remove("open"));
+  };
+
+  const closeMenu = () => {
+    navLinks.classList.remove("active");
+    burgerToggle.classList.remove("open");
+    closeDropdowns();
+  };
 
   // Toggle menu visibility
   burgerToggle.addEventListener("click", (e) => {
     e.stopPropagation();
-    navLinks.classList.toggle("active");
-    burgerToggle.classList.toggle("open");
+    const isActive = navLinks.classList.toggle("active");
+    burgerToggle.classList.toggle("open", isActive);
+    if (!isActive) closeDropdowns();
   });
 
-  // Automatically close menu when clicking a link
-  navLinksItem.forEach((link) => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("active");
-      burgerToggle.classList.remove("open");
+  // On touch/mobile, tapping a dropdown trigger expands its submenu
+  // instead of navigating away, since :hover never fires on touch devices.
+  dropdowns.forEach((dropdown) => {
+    const trigger = dropdown.querySelector(".dropdown-trigger");
+    if (!trigger) return;
+
+    trigger.addEventListener("click", (e) => {
+      if (window.innerWidth > MOBILE_BREAKPOINT) return;
+
+      e.preventDefault();
+      const isOpen = dropdown.classList.contains("open");
+      closeDropdowns();
+      dropdown.classList.toggle("open", !isOpen);
     });
+  });
+
+  // Automatically close menu when clicking a leaf link
+  navLinksItem.forEach((link) => {
+    link.addEventListener("click", closeMenu);
   });
 
   // Close menu if clicking anywhere outside the navigation
   document.addEventListener("click", (e) => {
     if (!navLinks.contains(e.target) && !burgerToggle.contains(e.target)) {
-      navLinks.classList.remove("active");
-      burgerToggle.classList.remove("open");
+      closeMenu();
     }
   });
 }
