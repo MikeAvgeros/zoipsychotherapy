@@ -512,15 +512,16 @@ header.scrolled .burger span {
 
 .profile-image img {
   width: 100%;
-  height: 720px;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
 }
 
 .profile-label {
   display: block;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--primary);
@@ -756,7 +757,6 @@ header.scrolled .burger span {
    ========================================================================== */
 .service-overview {
   padding: 4rem 0;
-  background: var(--bg-white);
 }
 
 .service-overview-grid {
@@ -768,7 +768,7 @@ header.scrolled .burger span {
 
 .service-label {
   display: block;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--primary);
@@ -776,31 +776,19 @@ header.scrolled .burger span {
   margin-bottom: 0.5rem;
 }
 
-.lead-text {
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: var(--dark-neutral);
-  line-height: 1.6;
+.service-editorial-text p {
+  font-size: 1.1rem;
   margin-bottom: 1.5rem;
-}
-
-.service-editorial-text p:not(.lead-text) {
-  font-size: 1.05rem;
   color: var(--text-main);
-  margin-bottom: 1.5rem;
-}
-
-.service-editorial-image .image-fit {
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
 }
 
 .service-editorial-image img {
   width: 100%;
-  height: 480px;
+  height: 100%;
   object-fit: cover;
-  transition: var(--transition-smooth);
+  object-position: center;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
 }
 
 /* Editorial Focus Areas Section Styles */
@@ -884,6 +872,91 @@ header.scrolled .burger span {
 
   .lead-text {
     font-size: 1.15rem;
+  }
+}
+
+/* ==========================================================================
+   THERAPY APPROACH & FORMAT SECTION
+   ========================================================================== */
+.therapy-approach-section {
+  background-color: var(--bg-white);
+  padding: var(--section-padding);
+}
+
+.approach-content-stream {
+  margin: 0 auto;
+}
+
+.approach-content-stream h2 {
+  font-family: var(--font-serif);
+  font-size: 2.3rem;
+  color: var(--dark-neutral);
+  line-height: 1.3;
+  font-weight: 400;
+  margin-bottom: 1.8rem;
+}
+
+.approach-content-stream h2:not(:first-child) {
+  margin-top: 5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(19, 100, 66, 0.12);
+}
+
+.approach-content-stream p {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: var(--text-main);
+  margin-bottom: 2rem;
+}
+
+.approach-content-stream h3 {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 1.5px;
+  margin-top: 2.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.approach-content-stream h3 + p {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  margin-bottom: 1.8rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA CONSTRAINTS (Approach Section Subpage)
+   ========================================================================== */
+@media (max-width: 950px) {
+  .approach-content-stream h2 {
+    font-size: 2.1rem;
+  }
+
+  .approach-content-stream h2:not(:first-child) {
+    margin-top: 4rem;
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .approach-content-stream {
+    max-width: 100%;
+  }
+
+  .approach-content-stream h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .approach-content-stream h2:not(:first-child) {
+    margin-top: 3.5rem;
+  }
+
+  .approach-content-stream h3 {
+    font-size: 0.88rem;
+    margin-top: 1.8rem;
   }
 }
 
