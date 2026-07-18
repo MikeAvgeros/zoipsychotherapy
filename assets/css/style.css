@@ -7,7 +7,7 @@
   --accent: #e2ede5;
   --dark-neutral: #222d26;
   --text-main: #2e3b33;
-  --text-muted: #5c6b61;
+  --text-muted: #52605a;
   --bg-light: #edf1ee;
   --bg-white: #ffffff;
 
@@ -17,8 +17,9 @@
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --radius-lg: 20px;
   --radius-md: 12px;
-  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.03);
-  --shadow-md: 0 12px 35px rgba(34, 45, 38, 0.08);
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 28px rgba(34, 45, 38, 0.12);
+  --hairline: 1px solid rgba(0, 0, 0, 0.06);
 
   --section-padding: clamp(3.5rem, 8vw, 7.5rem) 0;
 }
@@ -57,6 +58,8 @@ body {
   line-height: 1.6;
   color: var(--text-main);
   background-color: var(--bg-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html,
@@ -79,6 +82,12 @@ a {
   transition: var(--transition-smooth);
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
 .container {
   width: 100%;
   max-width: 1440px;
@@ -92,8 +101,7 @@ a {
 .services-section,
 .profile-details-cv,
 .profile-accreditations,
-.service-focus,
-.fees-section {
+.service-focus {
   padding: var(--section-padding) !important;
 }
 
@@ -325,14 +333,16 @@ header.scrolled .burger span {
   line-height: 1.2;
   font-weight: 400;
   margin-bottom: 1.5rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
 }
 
 .hero-content p {
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 400;
   max-width: 680px;
   margin: 0 auto 2.5rem;
   opacity: 0.95;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
 }
 
 .cta-button {
@@ -429,6 +439,7 @@ header.scrolled .burger span {
   padding: 2rem;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
+  border: var(--hairline);
   border-top: 4px solid var(--primary);
 }
 
@@ -463,6 +474,7 @@ header.scrolled .burger span {
   margin-bottom: 1.5rem;
   height: 320px;
   box-shadow: var(--shadow-sm);
+  border: var(--hairline);
 }
 
 .team-img img {
@@ -691,6 +703,7 @@ header.scrolled .burger span {
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
+  border: var(--hairline);
   display: flex;
   flex-direction: column;
   transition: var(--transition-smooth);
@@ -827,7 +840,7 @@ header.scrolled .burger span {
   font-family: var(--font-serif);
   font-size: 2.5rem;
   color: var(--primary);
-  opacity: 0.4;
+  opacity: 0.55;
   line-height: 1;
   margin-bottom: 1rem;
 }
@@ -874,10 +887,6 @@ header.scrolled .burger span {
 @media (max-width: 600px) {
   .service-overview {
     padding: 2rem 0;
-  }
-
-  .lead-text {
-    font-size: 1.15rem;
   }
 }
 
@@ -969,10 +978,6 @@ header.scrolled .burger span {
 /* ==========================================================================
    FEES & POLICIES SECTION
    ========================================================================== */
-.fees-section {
-  padding: 6rem 0;
-  background: var(--bg-white);
-}
 
 .fees-grid-layout {
   display: grid;
@@ -1033,28 +1038,6 @@ header.scrolled .burger span {
 /* ==========================================================================
    PRACTICE POLICIES
    ========================================================================== */
-.policy-page-header {
-  margin-bottom: 3rem;
-  max-width: 800px;
-}
-
-.policy-meta {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--primary);
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 0.75rem;
-}
-
-.policy-lead {
-  font-size: 1.25rem;
-  line-height: 1.6;
-  color: var(--text-main);
-  font-weight: 400;
-}
-
 .policy-layout-grid {
   padding-top: 3rem;
   display: block;
@@ -1135,13 +1118,6 @@ header.scrolled .burger span {
   margin-bottom: 0.75rem !important;
 }
 
-/* Explicit high-contrast focus for monetary / slot cancellation rules */
-.policy-callout.dynamic-alert {
-  background-color: #faf8f4;
-  border: 1px solid rgba(0, 69, 38, 0.15);
-  border-left: 4px solid var(--accent); /* Accents the clay/terracotta pop */
-}
-
 /* ==========================================================================
    RESPONSIVE MEDIA CONSTRAINTS (Policy Optimization)
    ========================================================================== */
@@ -1160,14 +1136,6 @@ header.scrolled .burger span {
 }
 
 @media (max-width: 600px) {
-  .policy-page-header {
-    margin-bottom: 2rem;
-  }
-
-  .policy-lead {
-    font-size: 1.15rem;
-  }
-
   .policy-content-stream {
     gap: 3.5rem;
   }
@@ -1280,6 +1248,7 @@ header.scrolled .burger span {
   padding: 2rem;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
+  border: var(--hairline);
 }
 
 .contact-cards strong {
@@ -1546,11 +1515,6 @@ header.scrolled .burger span {
   .team-img {
     height: 380px;
     max-width: 100%;
-  }
-
-  .policy-page-header {
-    text-align: center;
-    margin-bottom: 2rem;
   }
 
   .policy-layout-grid {
