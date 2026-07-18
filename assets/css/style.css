@@ -35,9 +35,9 @@
 
 @media (max-width: 600px) {
   :root {
-    --fs-hero-title: clamp(2rem, 1.7rem + 1.5vw, 2.5rem);
+    --fs-hero-title: clamp(2.1rem, 1.7rem + 1.5vw, 2.5rem);
     --fs-page-title: clamp(1.9rem, 1.7rem + 1vw, 2.3rem);
-    --fs-section-title: clamp(1.75rem, 1.6rem + 0.75vw, 2.1rem);
+    --fs-section-title: clamp(1.8rem, 1.6rem + 0.75vw, 2.1rem);
     --fs-subsection-title: clamp(1.4rem, 1.3rem + 0.5vw, 1.6rem);
     --fs-display: clamp(1.7rem, 1.55rem + 0.75vw, 2rem);
     --fs-list-heading: clamp(1rem, 0.95rem + 0.14vw, 1.1rem);
@@ -358,7 +358,7 @@ header.scrolled .burger span {
 }
 
 .hero-content p {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 400;
   max-width: 680px;
   margin: 0 auto 2.5rem;
